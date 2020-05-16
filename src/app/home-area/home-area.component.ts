@@ -1,6 +1,5 @@
-import { OnDestroy, Component, OnInit, Input, ViewChild, ElementRef, HostListener, NgZone} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import * as THREE from 'three';
-import "./js/EnableThreeExamples";
 import $ from "jquery";
 
 
