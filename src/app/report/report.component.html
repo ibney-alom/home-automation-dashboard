@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header"> 
+        <h5 class="card-title">Live Report</h5>
+    </div>
+    <div class="card-body" style="height: 270px">
+     <div class="text-center mb-5">
+         <h1>{{totalPower}} w</h1>
+         <b>Total Power consmption</b>
+     </div>
+     <div class="row mb-3" *ngFor="let power of device; let i = index">
+           <ng-container *ngIf=power.on>
+                <div class="col-sm-6">
+                        {{power.name}}  : 
+                </div>
+                <div class="col-sm-6 text-right">
+                       {{power.power}} w
+                </div>  
+            </ng-container>   
+    </div>
+    </div>
+ 
+</div>

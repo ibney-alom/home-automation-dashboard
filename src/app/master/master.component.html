@@ -1,0 +1,35 @@
+<div class="row master_block">
+    <div class="col-md-8">
+        <app-home-area [devices]="electricalDevices"></app-home-area>
+    </div>
+
+    <div class="col-md-4 card_block">
+            <div class="card">
+                <div class="card-header"> 
+                    <h5 class="card-title">Settings</h5>
+                </div>
+                    <div class="card-body" style="height: 160px">
+                        <div class="row mb-3" *ngFor="let device of electricalDevices; let i = index">
+                            <div class="col-sm-4">
+                             {{device.name}}  : 
+                            </div>
+                            <div class="col-sm-8">
+                                <span>OFF &nbsp;</span>
+                                <label class="switch">
+                                        <input 
+                                        type="checkbox" 
+                                        [attr.id]="i"
+                                        [attr.name]="i"
+                                        [(ngModel)]="device.on"
+                                        >
+                                        <span class="slider round"></span>
+                                </label>
+                                <span>&nbsp; ON</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                  </div>
+                  <app-report [device]="electricalDevices"></app-report>
+            </div>
+</div>

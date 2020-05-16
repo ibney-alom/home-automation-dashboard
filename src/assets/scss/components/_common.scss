@@ -1,0 +1,8 @@
+.card{
+    margin-bottom: 20px;
+    background-color: $card-bg;
+    color: $primary-text-color;
+    .card-header{
+        background-color: $header-bg;
+    }
+}
